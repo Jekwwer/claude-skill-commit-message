@@ -1,0 +1,82 @@
+---
+ci:
+  run_on_all_branches: true
+  autofix_commit_msg: 'ci(pre-commit): auto fixes from pre-commit hooks'
+  autofix_prs: true
+  autoupdate_branch: 'main'
+  autoupdate_commit_msg: 'deps(pre-commit): bump pre-commit hooks to latest version'
+  autoupdate_schedule: quarterly
+  skip:
+    - markdown-link-check # network access unavailable in CI
+
+repos:
+  # ── Housekeeping Hooks ─────────────────────────────────────────────────────
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-merge-conflict
+        name: 'check:merge-conflicts'
+      - id: check-case-conflict
+        name: 'check:case-conflicts'
+      - id: detect-private-key
+        name: 'detect:private-keys'
+      - id: check-json
+        name: 'validate:json'
+      - id: check-yaml
+        name: 'validate:yaml'
+      - id: end-of-file-fixer
+        name: 'fix:newline-eof'
+      - id: mixed-line-ending
+        name: 'fix:line-endings'
+        args: [--fix=lf]
+      - id: trailing-whitespace
+        name: 'fix:trailing-whitespace'
+
+  # ── Markdown Hooks ─────────────────────────────────────────────────────────
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.48.0
+    hooks:
+      - id: markdownlint
+        name: 'lint:markdown'
+        args: ['--ignore-path', '.gitignore']
+
+  - repo: https://github.com/tcort/markdown-link-check
+    rev: v3.14.2
+    hooks:
+      - id: markdown-link-check
+        name: 'check:md-links'
+        args: ['--config', '.mlc-config.json']
+
+  # ── YAML Hooks ─────────────────────────────────────────────────────────────
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.38.0
+    hooks:
+      - id: yamllint
+        name: 'lint:yaml'
+        args: ['--config-file', '.yamllint.yml']
+
+  # ── Format Hooks ───────────────────────────────────────────────────────────
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: v3.8.3
+    hooks:
+      - id: prettier
+        name: 'format:prettier'
+        args: ['--write', '--config', '.prettierrc']
+        stages: [pre-commit]
+
+  # ── Spelling Hooks ─────────────────────────────────────────────────────────
+  - repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v10.0.0
+    hooks:
+      - id: cspell
+        name: 'check:spelling'
+      - id: cspell
+        name: 'check:commit-spelling'
+        args:
+          - --no-must-find-files
+          - --no-progress
+          - --no-summary
+          - --files
+          - .git/COMMIT_EDITMSG
+        stages: [commit-msg]
+        always_run: true
