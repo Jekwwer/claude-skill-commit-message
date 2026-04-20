@@ -1,0 +1,6 @@
+{
+  "ignorePaths": ["*.json", "*.yml", "*.yaml", ".devcontainer/*", ".editorconfig", ".gitignore", ".prettierrc"],
+  "useGitignore": true,
+  "version": "0.2",
+  "words": ["Evgenii", "gitmessage", "Jekwwer", "Shiliaev"]
+}
