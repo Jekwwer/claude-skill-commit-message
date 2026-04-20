@@ -1,0 +1,30 @@
+{
+  "name": "jekwwer/claude-skill-commit-message",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1.7.1": {
+      "version": "22"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": ["davidanson.vscode-markdownlint", "editorconfig.editorconfig", "esbenp.prettier-vscode", "streetsidesoftware.code-spell-checker"],
+      "settings": {
+        "[json][jsonc]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[markdown]": {
+          "editor.rulers": [120]
+        },
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.rulers": [88],
+        "files.autoSave": "onFocusChange",
+        "files.autoSaveWhenNoErrors": true,
+        "prettier.configPath": "./.prettierrc",
+        "prettier.prettierPath": "./node_modules/prettier"
+      }
+    }
+  }
+}
