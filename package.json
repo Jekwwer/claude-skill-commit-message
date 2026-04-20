@@ -1,0 +1,38 @@
+{
+  "name": "claude-skill-commit-message",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Generates commit messages from staged changes using ~/.gitmessage template with strict no-redundancy rules.",
+  "homepage": "https://github.com/Jekwwer/claude-skill-commit-message#readme",
+  "bugs": {
+    "url": "https://github.com/Jekwwer/claude-skill-commit-message/issues",
+    "email": "report@jekwwer.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jekwwer/claude-skill-commit-message.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Evgenii \"Jekwwer\" Shiliaev",
+    "email": "evgenii.shiliaev@jekwwer.com",
+    "url": "https://jekwwer.com"
+  },
+  "engines": {
+    "node": ">=22.0.0 <23"
+  },
+  "scripts": {
+    "spell": "cspell . --cache",
+    "format": "prettier --check --config .prettierrc .",
+    "format-fix": "prettier --write --config .prettierrc ."
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^7.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "^9.3.1",
+    "cspell": "^10.0.0",
+    "prettier": "^3.8.3",
+    "semantic-release": "^25.0.3"
+  }
+}
