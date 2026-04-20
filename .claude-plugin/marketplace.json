@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-skill-commit-message",
+  "description": "Generates commit messages from staged changes using ~/.gitmessage template with strict no-redundancy rules.",
+  "owner": {
+    "name": "Evgenii Shiliaev",
+    "url": "https://github.com/Jekwwer"
+  },
+  "plugins": [
+    {
+      "name": "claude-skill-commit-message",
+      "description": "Generates commit messages from staged changes using ~/.gitmessage template with strict no-redundancy rules.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

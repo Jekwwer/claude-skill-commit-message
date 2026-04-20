@@ -1,0 +1,9 @@
+{
+  "name": "claude-skill-commit-message",
+  "description": "Generates commit messages from staged changes using ~/.gitmessage template with strict no-redundancy rules.",
+  "version": "0.0.0",
+  "author": {
+    "name": "Evgenii Shiliaev",
+    "email": "evgenii.shiliaev@jekwwer.com"
+  }
+}
