@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.0 - 2026-04-23
+### 🚀 New Features
+
+* **commit-message:** expand drafting rules ([f44afc3](https://github.com/Jekwwer/claude-skill-commit-message/commit/f44afc3473b7d7c4cb8f8fcbaf080745ac42aa69))
+
 ## 1.0.0 - 2026-04-20
 ### 🚀 New Features
 
