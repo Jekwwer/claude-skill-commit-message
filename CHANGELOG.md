@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0 - 2026-04-24
+### 🚀 New Features
+
+* **commit-message:** rework output style for readability ([f62e6e5](https://github.com/Jekwwer/claude-skill-commit-message/commit/f62e6e5b014150eefd0086b3b60ee122a22c504d)), closes [#n](https://github.com/Jekwwer/claude-skill-commit-message/issues/n)
+
 ## 1.1.0 - 2026-04-23
 ### 🚀 New Features
 
