@@ -34,7 +34,7 @@ repos:
 
   # ── Markdown Hooks ─────────────────────────────────────────────────────────
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.48.0
+    rev: v0.49.0
     hooks:
       - id: markdownlint
         name: 'lint:markdown'
@@ -57,7 +57,7 @@ repos:
 
   # ── Format Hooks ───────────────────────────────────────────────────────────
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.8.3
+    rev: v3.9.4
     hooks:
       - id: prettier
         name: 'format:prettier'
@@ -66,7 +66,7 @@ repos:
 
   # ── Spelling Hooks ─────────────────────────────────────────────────────────
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v10.0.0
+    rev: v10.0.1
     hooks:
       - id: cspell
         name: 'check:spelling'
